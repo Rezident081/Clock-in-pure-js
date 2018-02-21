@@ -1,0 +1,45 @@
+html,body{
+    height: 100%;
+}
+body{
+    margin: 0;
+    font-family: "Albertus",Arial;
+}
+
+.wrapper{
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .clock-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border: 1px solid $border-color;
+        min-width: 370px;
+        padding: 0 30px;
+    }
+    .clock-container.tic{
+        .clock-item{
+            &:after{
+                opacity: 1;
+            }
+        }
+    }
+    .clock-item{
+        position: relative;
+        font-size: 80px;
+        padding: 15px 0;
+        color: $clock-item-color;
+        &:after{
+            content: ":";
+            position: absolute;
+            top: 5px;
+            transform: translateX(50%);
+            opacity: 0;
+        }
+        &:last-child:after{
+            content: "";
+        }
+    }
+}

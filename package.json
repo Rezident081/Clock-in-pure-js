@@ -1,0 +1,38 @@
+{
+  "name": "clock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rezident081/clock.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rezident081/clock/issues"
+  },
+  "homepage": "https://github.com/Rezident081/clock#readme",
+  "dependencies": {
+    "webpack": "^3.11.0"
+  },
+  "devDependencies": {
+    "autoprefixer-loader": "^3.2.0",
+    "css-loader": "^0.28.9",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.8",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^2.30.1",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.20.2",
+    "svg-loader": "0.0.2",
+    "uglifyjs-webpack-plugin": "^1.2.0",
+    "url-loader": "^0.6.2",
+    "webpack-dev-server": "^2.11.1"
+  }
+}
