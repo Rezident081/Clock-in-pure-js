@@ -36,7 +36,7 @@ body{
             position: absolute;
             top: 5px;
             transform: translateX(50%);
-            opacity: 0;
+            opacity: 1;
         }
         &:last-child:after{
             content: "";

@@ -1,41 +1,28 @@
 class Clock {
 
     constructor(){
-
-        this.setTime(new Date());
-        this.addToHtml(this.hours,this.minutes,this.seconds);
+        this.now = new Date();
     }
 
-    addToHtml(hours,minutes,seconds){
-
-        const wrapBlock = document.getElementsByClassName("clock-container")[0],
-              bHours = document.getElementsByClassName("hours")[0],
-              bMinutes = document.getElementsByClassName("minutes")[0],
-              bSeconds = document.getElementsByClassName("seconds")[0];
-        wrapBlock.classList.toggle("tic");
-        bHours.innerHTML = hours;
-        bMinutes.innerHTML = minutes;
-        bSeconds.innerHTML = seconds;
+    getSeconds(){
+        return this.setTwoDigids(this.now.getSeconds());
     }
 
-    setTime(date){
-        
-        this.hours = this.formatTime(date.getHours());
-        this.minutes = this.formatTime(date.getMinutes());
-        this.seconds = this.formatTime(date.getSeconds());
+    getMinutes(){
+        return this.setTwoDigids(this.now.getMinutes());
     }
 
-    start(){
-
-        this.setTime.call(this, new Date());
-        this.addToHtml.apply(this, [this.hours, this.minutes, this.seconds]);
+    getHours(){
+        return this.setTwoDigids(this.now.getHours());
     }
 
-    formatTime(item){
-
-        return item < 10 ? "0" + item : item; 
+    setTwoDigids(val){
+        if(val.toString().length <= 1){
+            return "0" + val.toString();
+        }
+        return val.toString();
     }
 
 }
 
-module.exports = Clock;
+export default Clock;

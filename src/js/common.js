@@ -1,9 +1,16 @@
 import "../scss/main.scss";
 import Clock from "./Clock/Clock.js";
 
+function startTime(){
+    let time = new Clock();
+    let seconds = time.getSeconds();
+    let minutes = time.getMinutes();
+    let hours = time.getHours();
 
-var cLock = new Clock;
+    document.getElementsByClassName("hours")[0].innerHTML = hours;
+    document.getElementsByClassName("minutes")[0].innerHTML = minutes;
+    document.getElementsByClassName("seconds")[0].innerHTML = seconds;
 
-setInterval(function(){
-    cLock.start();
-}, 1000);
+}
+startTime();
+setInterval( startTime, 1000 );
